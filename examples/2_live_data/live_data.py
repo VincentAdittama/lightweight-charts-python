@@ -6,8 +6,8 @@ if __name__ == '__main__':
 
     chart = Chart()
 
-    df1 = pd.read_csv('ohlcv.csv')
-    df2 = pd.read_csv('next_ohlcv.csv')
+    df1 = pd.read_csv('examples/2_live_data/ohlcv.csv')
+    df2 = pd.read_csv('examples/2_live_data/next_ohlcv.csv')
 
     chart.set(df1)
 

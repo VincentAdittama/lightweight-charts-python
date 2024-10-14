@@ -6,7 +6,7 @@ if __name__ == '__main__':
 
     chart = Chart()
 
-    df = pd.read_csv('ohlcv.csv')
+    df = pd.read_csv('examples/5_styling/ohlcv.csv')
 
     chart.layout(background_color='#090008', text_color='#FFFFFF', font_size=16, font_family='Helvetica')
 
@@ -24,3 +24,4 @@ if __name__ == '__main__':
     chart.set(df)
 
     chart.show(block=True)
+

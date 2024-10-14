@@ -13,7 +13,7 @@ if __name__ == '__main__':
     chart = Chart()
     chart.legend(visible=True)
 
-    df = pd.read_csv('ohlcv.csv')
+    df = pd.read_csv('examples/4_line_indicators/ohlcv.csv')
     chart.set(df)
 
     line = chart.create_line('SMA 50')
@@ -21,3 +21,4 @@ if __name__ == '__main__':
     line.set(sma_data)
 
     chart.show(block=True)
+

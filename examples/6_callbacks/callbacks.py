@@ -1,4 +1,5 @@
 import pandas as pd
+from pathlib import Path
 from lightweight_charts import Chart
 
 
@@ -6,7 +7,8 @@ def get_bar_data(symbol, timeframe):
     if symbol not in ('AAPL', 'GOOGL', 'TSLA'):
         print(f'No data for "{symbol}"')
         return pd.DataFrame()
-    return pd.read_csv(f'bar_data/{symbol}_{timeframe}.csv')
+    path = Path(__file__).parent / f'bar_data/{symbol}_{timeframe}.csv'
+    return pd.read_csv(path)
 
 
 def on_search(chart, searched_string):  # Called when the user searches.
@@ -44,3 +46,4 @@ if __name__ == '__main__':
     chart.horizontal_line(200, func=on_horizontal_line_move)
 
     chart.show(block=True)
+

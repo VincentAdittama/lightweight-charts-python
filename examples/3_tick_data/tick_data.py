@@ -4,10 +4,10 @@ from lightweight_charts import Chart
 
 if __name__ == '__main__':
 
-    df1 = pd.read_csv('ohlc.csv')
+    df1 = pd.read_csv('examples/3_tick_data/ohlc.csv')
 
     # Columns: time | price
-    df2 = pd.read_csv('ticks.csv')
+    df2 = pd.read_csv('examples/3_tick_data/ticks.csv')
 
     chart = Chart()
 
@@ -18,3 +18,4 @@ if __name__ == '__main__':
     for i, tick in df2.iterrows():
         chart.update_from_tick(tick)
         sleep(0.03)
+
